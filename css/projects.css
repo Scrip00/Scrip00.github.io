@@ -1,0 +1,174 @@
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+body {
+    background: #141414;
+    position: relative;
+}
+
+#background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 3rem;
+    padding: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    max-width: 1200px;
+}
+
+.projects-grid .project {
+    background: linear-gradient(111deg, rgba(255, 0, 172, 1) 0%, rgba(255, 0, 43, 1) 100%) border-box;
+    border-radius: 1rem;
+    border: 4px solid transparent;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.projects-grid .project img:hover {
+    transform: scale(1.1);
+}
+
+.projects-grid .project img {
+    width:100%; 
+    height:100%;
+    object-fit: cover;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.projects-grid .project .layer {
+    background: rgb(2, 0, 36);
+    background-color: rgba(1.0, 1.0, 1.0, 0.7);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    transition: 0.5s;
+}
+
+.projects-grid .project .layer:hover {
+    height: 100%;
+}
+
+.projects-grid .project .layer:hover p {
+    margin-top: 0%;
+}
+
+.projects-grid .project .layer h3 {
+    font-family: 'Varela Round';
+    color: aliceblue;
+    position: relative;
+    text-align: center;
+    height: 30px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+.projects-grid .project .layer p {
+    position: relative;
+    margin-top: 100%;
+    overflow: hidden;
+    font-family: 'Varela Round';
+    color: aliceblue;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    transition: 0.4s;
+}
+
+.projects-grid .project .layer p:hover {
+    margin-top: 0%;
+}
+
+.projects-grid .project .links {
+    background-color: rgba(1.0, 1.0, 1.0, 0.7);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 100px);
+    grid-gap: 1rem;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    bottom: 0;
+    height: 20px;
+}
+
+.projects-grid .project .links .github {
+    background: url('/imgs/GitHub_logo.svg');
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover;
+    height: 20px;
+    width: 20px;
+}
+
+.projects-grid .project .links .external-link {
+    background: url('/imgs/external-link.svg');
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover;
+    height: 20px;
+    width: 20px;
+}
+
+.projects-grid .project .links .google-play {
+    background: url('/imgs/google-play.svg');
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover;
+    height: 20px;
+    width: 20px;
+}
+
+@media only screen and (max-width:1000px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    }
+
+    .projects-grid .project .layer h3 {
+        font-size: 30px;
+        padding-bottom: 30px;
+    }
+
+    .projects-grid .project {
+        height: 600px;
+    }
+
+    .projects-grid .project .layer {
+        height: 160px;
+    }
+
+    .projects-grid .project .layer p {
+        font-size: 24px;
+    }
+
+    .projects-grid .project .links {
+        height: 50px;
+    }
+
+    .projects-grid .project .links .github {
+        height: 50px;
+        width: 50px;
+    }
+    
+    .projects-grid .project .links .external-link {
+        height: 50px;
+        width: 50px;
+    }
+    
+    .projects-grid .project .links .google-play {
+        height: 50px;
+        width: 50px;
+    }
+}

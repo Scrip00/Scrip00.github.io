@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Home page</title>
+      <link rel="stylesheet" href="css/home.css">
+   </head>
+   <body>
+      <div id="header">
+         <div class="container">
+            <canvas id="cube_canvas"></canvas>
+            <div class="nav-container">
+               <div class="header-text">
+                  <h1>Alexander <span>Lavrenenko</span></h1>
+                  <p>Software Developer</p>
+               </div>
+               <nav>
+                  <ul>
+                     <li>
+                        <a href="projects.html">Projects</a>
+                        <a href="resume.html">Resume</a>
+                        <a href="#about">About me</a>
+                     </li>
+                  </ul>
+               </nav>
+               <div class="socials">
+                  <div class="link"><a href="https://github.com/Scrip00"><img
+                           src="imgs/GitHub_logo.svg"></a></div>
+                  <div class="link"><h3>lavrenenko.2003@gmail.com<br>alavrenenko@umass.edu</h3></div>
+                  <div class="link"><a
+                        href="https://www.linkedin.com/in/alexander-lavrenenko/"><img
+                           src="imgs/LinkedIn_logo.svg"></a></div>
+               </div>
+            </div>
+         </div>
+         <h2 id="helper">Click here --><br>Use WASD and mouse to move</h2>
+      </div>
+      <div id="about">
+         <canvas id='background'></canvas>
+         <div class="container">
+            <div class="row">
+               <div class="about-col-1">
+                  <img src="/imgs/My_photo.png" width="40%">
+               </div>
+               <div class="about-col-2">
+                  <h1 class="sub-title">About Me</h1>
+                  <p>With <span>over 5 years</span> of programming experience, I
+                     have focused my research on <span>machine learning and
+                        software
+                        development</span>. With knowledge of multiple
+                     programming languages, I can bring <span>the most elegant
+                        and effective solutions</span> to life for my employers
+                     and
+                     clients. The goal of my projects has always been to make
+                     the program
+                     <span>simple, efficient, and feature-rich</span> so that it
+                     can
+                     kick-start the development of revolutionary technology.</p>
+                  <div class="tab-titles">
+                     <p class="tab-links active-link"
+                        onclick="opentab('skills')">Skills</p>
+                     <p class="tab-links" onclick="opentab('employers')">Employers</p>
+                     <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                     <p class="tab-links" onclick="opentab('education')">Education</p>
+                  </div>
+                  <div class="tab-contents active-tab" id="skills">
+                     <ul>
+                        <li><span>Programming Languages</span><br>Java, Kotlin,
+                           Python, JavaScript, C++, MATLAB, GLSL, CSS</li>
+                        <li><span>IDE’s</span><br>Android Studio, Visual Studio
+                           Code, IntelliJ Idea, PyCharm, Jupyter Notebook,
+                           NetBeans, Atom</li>
+                        <li><span>Tools</span><br>TDD, SOLID, OOP, SQL, GitHub,
+                           APIs, Bazel, Slack, Linux Command Prompt,
+                           Multithreading, UI/UX, File Management, Firebase,
+                           TensorFlow, Pandas, SK Learn, Retrofit, Ktor</li>
+                     </ul>
+                  </div>
+                  <div class="tab-contents" id="employers">
+                     <ul>
+                        <li><span>University of Massachusetts Amherst</span>⠀(Jul
+                           – Aug 2022)<br>Manager
+                           - UMass Summer Conference Services</li>
+                        <li><span>MoodMe</span>⠀(Feb
+                           – Apr 2022)<br>Android Developer Intern</li>
+                        <li><span>Russian Academy of Sciences</span>⠀(Jun 2020 –
+                           Sep 2020)<br>Software
+                           Engineer Intern</li>
+                        <li><span>TAU Tracker Company</span>⠀(Nov 2019 – Oct
+                           2020)<br>Software
+                           Engineer Intern</li>
+                     </ul>
+                  </div>
+                  <div class="tab-contents" id="experience">
+                     <ul>
+                        <li><span>Awards</span><br>Faculty Honors in Fall 2021
+                           and Spring 2022<br>Multiple prize-winner of Russian
+                           National Physics Olympiad<br>Physics and Mathematics
+                           Olympiad "Phystech"<br>Mathematics Olympiad "Unity
+                           Formula"</li>
+                        <li><span>Clubs</span><br>UMass ACM Machine Learning
+                           Club<br>UMass Undergraduate Math Club</li>
+                     </ul>
+                  </div>
+                  <div class="tab-contents" id="education">
+                     <ul>
+                        <li><span>University of Massachusetts Amherst</span><br>College
+                           of Information and Computer Sciences<br>B.S.
+                           in Computer Science and Mathematics (double major)<br>Exp.
+                           Graduation: May 2024<br>GPA: 4.0</li>
+                        <li><span>Skolkovo International Gymnasium</span><br>International
+                           Baccalaureate<br>2019-2021<br>IB Score: 40/45</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="js/raymarching.js" type="text/javascript"></script>
+      <script src="js/background.js" type="text/javascript"></script>
+      <script>
+         var tablinks = document.getElementsByClassName("tab-links");
+         var tabcontents = document.getElementsByClassName("tab-contents");
+         
+         function opentab(tabname) {
+            for (tablink of tablinks) {
+               tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+               tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+         }
+      </script>
+   </body>
+</html>
