@@ -274,7 +274,7 @@ const sampleFramesAttributeLocation = gl.getUniformLocation(program, "sampleFram
 
 resizeCanvasToDisplaySize(gl.canvas);
 canvas.width = canvas.clientWidth;
-canvas.heigth = canvas.clientHeight;
+canvas.height = canvas.clientHeight;
 
 // put in a clipspace quad
 let buffer = gl.createBuffer();

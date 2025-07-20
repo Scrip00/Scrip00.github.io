@@ -12,7 +12,7 @@
             <div class="nav-container">
                <div class="header-text">
                   <h1>Alexander <span>Lavrenenko</span></h1>
-                  <p>Software Developer</p>
+                  <p>Software Engineer</p>
                </div>
                <nav>
                   <ul>
@@ -26,7 +26,7 @@
                <div class="socials">
                   <div class="link"><a href="https://github.com/Scrip00"><img
                            src="imgs/GitHub_logo.svg"></a></div>
-                  <div class="link"><h3>lavrenenko.2003@gmail.com<br>alavrenenko@umass.edu</h3></div>
+                  <div class="link"><h3>alavrenenko1111@gmail.com</h3></div>
                   <div class="link"><a
                         href="https://www.linkedin.com/in/alexander-lavrenenko/"><img
                            src="imgs/LinkedIn_logo.svg"></a></div>
@@ -44,18 +44,7 @@
                </div>
                <div class="about-col-2">
                   <h1 class="sub-title">About Me</h1>
-                  <p>With <span>over 5 years</span> of programming experience, I
-                     have focused my research on <span>machine learning and
-                        software
-                        development</span>. With knowledge of multiple
-                     programming languages, I can bring <span>the most elegant
-                        and effective solutions</span> to life for my employers
-                     and
-                     clients. The goal of my projects has always been to make
-                     the program
-                     <span>simple, efficient, and feature-rich</span> so that it
-                     can
-                     kick-start the development of revolutionary technology.</p>
+                  <p>I engineer robust solutions that users can rely on. With a broad technical background, I build software that's performance-oriented, intuitive, and ready to scale. I'm a fast learner, after all.</p>
                   <div class="tab-titles">
                      <p class="tab-links active-link"
                         onclick="opentab('skills')">Skills</p>
@@ -65,19 +54,16 @@
                   </div>
                   <div class="tab-contents active-tab" id="skills">
                      <ul>
-                        <li><span>Programming Languages</span><br>Java, Kotlin,
-                           Python, JavaScript, C++, MATLAB, GLSL, CSS</li>
-                        <li><span>IDE’s</span><br>Android Studio, Visual Studio
-                           Code, IntelliJ Idea, PyCharm, Jupyter Notebook,
-                           NetBeans, Atom</li>
-                        <li><span>Tools</span><br>TDD, SOLID, OOP, SQL, GitHub,
-                           APIs, Bazel, Slack, Linux Command Prompt,
-                           Multithreading, UI/UX, File Management, Firebase,
-                           TensorFlow, Pandas, SK Learn, Retrofit, Ktor</li>
+                        <li><span>Programming Languages</span><br>Python, C++, Java, Kotlin, JavaScript, SQL</li>
+                        <li><span>Frameworks</span><br>PyTorch, TensorFlow, NumPy, SciPy, Flask, CUDA, PyCUDA, OpenCV, Android SDK</li>
+                        <li><span>Tools</span><br>Git, Azure Functions, Docker, Linux</li>
+                        <li><span>Other</span><br>GPU Acceleration, Multithreading, ML, Deep Learning, RL, NLP, Ray Tracing, Agile, UI Design</li>
                      </ul>
                   </div>
                   <div class="tab-contents" id="employers">
                      <ul>
+                        <li><span>Portal</span>⠀(May 2022 – Present)<br>Software Engineer Team Leader</li>
+                        <li><span>Microsoft, Nuance</span>⠀(Jan 2022 – Feb 2022)<br>Software Engineer</li>
                         <li><span>University of Massachusetts Amherst</span>⠀(Jul
                            – Aug 2022)<br>Manager
                            - UMass Summer Conference Services</li>
@@ -93,7 +79,7 @@
                   </div>
                   <div class="tab-contents" id="experience">
                      <ul>
-                        <li><span>Awards</span><br>Faculty Honors in Fall 2021
+                        <li><span>Awards</span><br>Winner of the UofT AI ProjectX competition 2022<br>Faculty Honors in Fall 2021
                            and Spring 2022<br>Multiple prize-winner of Russian
                            National Physics Olympiad<br>Physics and Mathematics
                            Olympiad "Phystech"<br>Mathematics Olympiad "Unity
@@ -106,10 +92,9 @@
                      <ul>
                         <li><span>University of Massachusetts Amherst</span><br>College
                            of Information and Computer Sciences<br>B.S.
-                           in Computer Science and Mathematics (double major)<br>Exp.
-                           Graduation: May 2024<br>GPA: 4.0</li>
+                           in Computer Science<br>September 2021 – December 2024<br>GPA: 3.8</li>
                         <li><span>Skolkovo International Gymnasium</span><br>International
-                           Baccalaureate<br>2019-2021<br>IB Score: 40/45</li>
+                           Baccalaureate<br>2019 – 2021<br>IB Score: 40/45</li>
                      </ul>
                   </div>
                </div>
@@ -133,5 +118,22 @@
             document.getElementById(tabname).classList.add("active-tab");
          }
       </script>
+      <script>
+         function isMobileDevice() {
+           return /Android|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+         }
+         
+         window.addEventListener('load', function() {
+           if (isMobileDevice()) {
+             let canvas = document.getElementById("cube_canvas");
+             canvas.parentNode.removeChild(canvas);
+             canvas = document.getElementById("helper");
+             canvas.parentNode.removeChild(canvas);
+             canvas = document.querySelector(".socials");
+             canvas.parentNode.removeChild(canvas);
+           }
+         });
+         </script>
+         
    </body>
 </html>
